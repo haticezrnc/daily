@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Giriş ve Kayıt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="register">
+        <h2>Kayıt Ol</h2>
+        <form id="registerForm">
+            <input type="text" id="regUsername" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="regPassword" placeholder="Şifre" required>
+            <button type="submit">Kayıt Ol</button>
+        </form>
+        <p>Hesabınız var mı? <a href="#" onclick="toggleForms()">Giriş Yap</a></p>
+    </div>
+
+    <div class="container" id="login" style="display: none;">
+        <h2>Giriş Yap</h2>
+        <form id="loginForm">
+            <input type="text" id="logUsername" placeholder="Kullanıcı Adı" required>
+            <input type="password" id="logPassword" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <p>Hesabınız yok mu? <a href="#" onclick="toggleForms()">Kayıt Ol</a></p>
+    </div>
+
+    <div class="container" id="daily" style="display: none;">
+        <h2>Günlük ve To-Do List</h2>
+        <button id="logoutButton">Çıkış Yap</button>
+        <form id="dailyForm">
+            <textarea id="dailyEntry" placeholder="Günlük yazınız..." required></textarea>
+            <button type="submit">Kaydet</button>
+        </form>
+        <ul id="entryList"></ul>
+        <h3>To-Do List</h3>
+        <form id="todoForm">
+            <input type="text" id="todoItem" placeholder="Yapılacak..." required>
+            <button type="submit">Ekle</button>
+        </form>
+        <ul id="todoList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
